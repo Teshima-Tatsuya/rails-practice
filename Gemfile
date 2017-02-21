@@ -34,9 +34,30 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# 認証関連
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
+
+# 秘密情報関連
+gem 'dotenv-rails'
+
+gem 'slim-rails'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'rack-mini-profiler', require: false
+  gem 'bullet'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'guard'
+  gem 'guard-rspec'
 end
 
 group :development do
@@ -53,3 +74,17 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # for heroku
 gem 'rails_12factor', group: :production
+
+
+group :test do
+  gem 'faker'
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'launchy'
+  gem 'selenium-webdriver'
+  gem 'simplecov', require: false
+  gem 'shoulda-matchers'
+  gem 'spring'
+  gem 'spring-commands-rspec'
+end
+
