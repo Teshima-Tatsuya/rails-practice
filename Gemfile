@@ -45,6 +45,11 @@ gem 'dotenv-rails'
 
 gem 'slim-rails'
 
+# js関連
+gem 'react-rails'
+gem 'sprockets'
+gem 'sprockets-es6'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
