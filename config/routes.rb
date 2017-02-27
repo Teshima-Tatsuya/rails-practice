@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'test/paycomplete'
+
   root 'test#index'
 	devise_for :users, controllers: { :omniauth_callbacks => "omniauth_callbacks" }
   get 'test/index'
